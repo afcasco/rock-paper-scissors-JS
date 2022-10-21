@@ -31,12 +31,28 @@ function playRound(computerSelection, playerSelection) {
   }
 }
 
-let winner = playRound(getComputerChoice(3), getPlayerSelection());
+function game() {
+  let cpuRounds = 0;
+  let playerRounds = 0;
+  for (let i = 0; i < 5; i++) {
+    let winner = playRound(getComputerChoice(3), getPlayerSelection());
 
-if (winner == 0) {
-  console.log("Computer wins!");
-} else if (winner == 1) {
-  console.log("Player wins!");
-} else {
-  console.log("It's a draw!");
+    if (winner == 0) {
+      console.log("Computer wins!");
+      cpuRounds++;
+    } else if (winner == 1) {
+      console.log("Player wins!");
+      playerRounds++;
+    } else {
+      console.log("It's a draw!");
+    }
+  }
+
+  return cpuRounds > playerRounds ? 0 : 1;
 }
+
+let result = game();
+
+console.log(
+  "Final result is: " + result == 0 ? "computer won!" : "player own!"
+);
