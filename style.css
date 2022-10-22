@@ -1,0 +1,66 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.887);
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+
+  border: 10px solid red;
+  color: rgba(255, 255, 255, 0.971);
+  font-size: xx-large;
+  font-weight: bolder;
+  flex-shrink: 1;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.userOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 2px solid red;
+}
+
+.cpuPick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border: 2px solid red;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border: 2px solid red;
+}
+
+.results {
+  display: flex;
+  width: 100%;
+
+  border: 2px solid red;
+
+  color: rgba(255, 255, 255, 0.971);
+  font-size: xx-large;
+  font-weight: bolder;
+}
