@@ -1,10 +1,5 @@
 function getComputerChoice() {
   let selection = getRandomInt(3);
-  let text;
-  if (selection == 0) text = "rock";
-  if (selection == 1) text = "paper";
-  if (selection == 2) text = "scissors";
-  console.log("computer picked " + text);
   return selection;
 }
 
@@ -32,24 +27,13 @@ function winnerToString(winner) {
 
 function getRoundResult(computerSelection, playerSelection) {
   let winner;
-  if (computerSelection == playerSelection) {
+  if (computerSelection === playerSelection) {
     winner = 2;
-  }
-  if (Math.abs(computerSelection, playerSelection) == 1) {
+  } else if (Math.abs(computerSelection, playerSelection) == 1) {
     winner = computerSelection > playerSelection ? 0 : 1;
   } else {
     winner = computerSelection < playerSelection ? 0 : 1;
   }
-
-  /* alert(
-    "player picked: " +
-      selectedToString(playerSelection) +
-      "\ncpu picked: " +
-      selectedToString(computerSelection) +
-      "\nThe winner is: " +
-      winnerToString(winner)
-  );*/
-
   return winner;
 }
 
