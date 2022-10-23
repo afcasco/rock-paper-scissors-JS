@@ -87,9 +87,9 @@ function showRoundWinner(user, cpu, winner) {
   toAdd.textContent =
     "cpupick: " +
     selectedToString(cpu) +
-    "\nuserpick: " +
+    " | userpick: " +
     selectedToString(user) +
-    "\nresult: " +
+    " | result: " +
     winnerToString(winner);
 }
 
