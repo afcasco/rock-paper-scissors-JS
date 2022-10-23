@@ -101,6 +101,6 @@ body {
 }
 
 .clicked {
-  border: 10px solid red;
+  border: 2px solid red;
   transition-duration: 0.07s;
 }
