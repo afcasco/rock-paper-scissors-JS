@@ -41,14 +41,15 @@ function getRoundResult(computerSelection, playerSelection) {
     winner = computerSelection < playerSelection ? 0 : 1;
   }
 
-  alert(
+  /* alert(
     "player picked: " +
       selectedToString(playerSelection) +
       "\ncpu picked: " +
       selectedToString(computerSelection) +
       "\nThe winner is: " +
       winnerToString(winner)
-  );
+  );*/
+
   return winner;
 }
 
@@ -80,10 +81,16 @@ function removeTransition(button) {
   });
 }
 
-function showRoundWinner(winner) {
+function showRoundWinner(user, cpu, winner) {
   const result = document.querySelector(".status");
   const toAdd = document.querySelector("h1");
-  toAdd.textContent = winnerToString(winner);
+  toAdd.textContent =
+    "cpupick: " +
+    cpu +
+    "\nuserpick: " +
+    user +
+    "\nresult: " +
+    winnerToString(winner);
 }
 
 function playeOneRound(buttons) {
@@ -96,7 +103,7 @@ function playeOneRound(buttons) {
       let cpuPick = getComputerChoice();
       let winner = getRoundResult(cpuPick, userPick);
 
-      showRoundWinner(winner);
+      showRoundWinner(userPick, cpuPick, winner);
     });
   });
 }
