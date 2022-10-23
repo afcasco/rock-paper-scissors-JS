@@ -86,9 +86,9 @@ function showRoundWinner(user, cpu, winner) {
   const toAdd = document.querySelector("h1");
   toAdd.textContent =
     "cpupick: " +
-    cpu +
+    selectedToString(cpu) +
     "\nuserpick: " +
-    user +
+    selectedToString(user) +
     "\nresult: " +
     winnerToString(winner);
 }
